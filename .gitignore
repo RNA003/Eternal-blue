@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Metasploit resource file
+config.rc
+
+# Temporary files
+*.tmp
+*.log
+
+# Optional: exclude compiled binaries if you want to regenerate them later
+# shellcode/*.bin
